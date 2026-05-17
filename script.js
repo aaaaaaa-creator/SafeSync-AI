@@ -1,5 +1,7 @@
 window.onload = function() {
 
+  let activeTimer = null;
+
   // =========================
   // Hospital Database
   // =========================
@@ -113,6 +115,11 @@ window.onload = function() {
   // =========================
 
   document.getElementById("accidentBtn").onclick = function() {
+
+    if (activeTimer) {
+      clearInterval(activeTimer);
+      activeTimer = null;
+    }
 
     // Random Data Generation
 
@@ -367,20 +374,26 @@ ${recommendation}
     // Countdown Logic
     // =========================
 
-    let timer = setInterval(function() {
+    activeTimer = setInterval(function() {
 
       countdown--;
 
-      document.getElementById("countdownText").innerHTML =
-        `Sending emergency alert in
-        ${countdown} seconds...`;
+      const countdownEl = document.getElementById("countdownText");
+      if (countdownEl) {
+        countdownEl.innerHTML =
+          `Sending emergency alert in
+          ${countdown} seconds...`;
+      }
 
       if(countdown <= 0) {
 
-        clearInterval(timer);
+        clearInterval(activeTimer);
+        activeTimer = null;
 
-        document.getElementById("countdownText").innerHTML =
-          "Emergency alert sent successfully.";
+        const countdownEl2 = document.getElementById("countdownText");
+        if (countdownEl2) {
+          countdownEl2.innerHTML = "Emergency alert sent successfully.";
+        }
 
         let emergencyFlow = `
 
@@ -413,12 +426,10 @@ ${recommendation}
 
         setTimeout(function() {
 
-          document.getElementById("step1").innerHTML =
-            `✅ Live location shared:
-            ${randomLocation}`;
-
-          document.getElementById("step2").style.display =
-            "block";
+            const step1 = document.getElementById("step1");
+          const step2 = document.getElementById("step2");
+          if (step1) step1.innerHTML = `✅ Live location shared: ${randomLocation}`;
+          if (step2) step2.style.display = "block";
 
         }, 1500);
 
@@ -426,11 +437,10 @@ ${recommendation}
 
         setTimeout(function() {
 
-          document.getElementById("step2").innerHTML =
-            `✅ ${response}`;
-
-          document.getElementById("step3").style.display =
-            "block";
+          const step2 = document.getElementById("step2");
+          const step3 = document.getElementById("step3");
+          if (step2) step2.innerHTML = `✅ ${response}`;
+          if (step3) step3.style.display = "block";
 
         }, 3000);
 
@@ -438,12 +448,10 @@ ${recommendation}
 
         setTimeout(function() {
 
-          document.getElementById("step3").innerHTML =
-            `✅ Emergency contact informed:
-            ${emergencyContact.name}`;
-
-          document.getElementById("finalStep").style.display =
-            "block";
+          const step3 = document.getElementById("step3");
+          const finalStep = document.getElementById("finalStep");
+          if (step3) step3.innerHTML = `✅ Emergency contact informed: ${emergencyContact.name}`;
+          if (finalStep) finalStep.style.display = "block";
 
         }, 4500);
 
@@ -462,7 +470,8 @@ ${recommendation}
         e.target.id === "cancelBtn"
       ) {
 
-        clearInterval(timer);
+        clearInterval(activeTimer);
+        activeTimer = null;
 
         document.getElementById("result").innerHTML =
 
