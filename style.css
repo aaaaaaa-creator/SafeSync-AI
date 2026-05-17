@@ -1,0 +1,190 @@
+style.css
+body {
+
+  font-family: Arial, sans-serif;
+
+  background: #f4f7fb;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+.container {
+
+  max-width: 700px;
+
+  margin: 40px auto;
+
+  padding: 30px;
+
+  background: white;
+
+  border-radius: 15px;
+
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+
+}
+
+h1 {
+
+  color: #d62828;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+
+}
+
+.subtitle {
+
+  text-align: center;
+
+  color: #555;
+
+  margin-bottom: 30px;
+
+}
+
+button {
+
+  background: #d62828;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  margin-right: 10px;
+
+  transition: 0.3s;
+
+}
+
+button:hover {
+
+  opacity: 0.9;
+
+  transform: scale(1.03);
+
+}
+
+#result {
+
+  margin-top: 30px;
+
+}
+
+.status-card {
+
+  background: #ffffff;
+
+  border-left: 6px solid #d62828;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.08);
+
+}
+
+.alert {
+
+  color: #d62828;
+
+  font-weight: bold;
+
+}
+
+.success {
+
+  color: green;
+
+  font-weight: bold;
+
+}
+
+.info {
+
+  color: #1d3557;
+
+  font-weight: bold;
+
+}
+
+.low {
+
+  color: green;
+
+  font-weight: bold;
+
+}
+
+.medium {
+
+  color: orange;
+
+  font-weight: bold;
+
+}
+
+.critical {
+
+  color: red;
+
+  font-weight: bold;
+
+}
+
+hr {
+
+  border: none;
+
+  border-top: 1px solid #ddd;
+
+  margin: 20px 0;
+
+}
+
+p {
+
+  line-height: 1.7;
+
+}
+
+.dashboard-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+}
+
+.live-status {
+
+  background: #ffe5e5;
+
+  color: #d62828;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+}
