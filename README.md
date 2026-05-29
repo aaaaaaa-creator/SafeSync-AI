@@ -1,11 +1,6 @@
-========================================================================
+------------------------------------------------------------------------
 SAFESYNC AI — AI-ASSISTED EMERGENCY RESPONSE SYSTEM
-========================================================================
-Developed for: COERS Road Safety Hackathon 2026, IIT Madras
-Track: ROADSoS (Smart Emergency Assistance)
-Team Identity: ByteStorm
-Submitted by: Ruhina Begum
-========================================================================
+------------------------------------------------------------------------
 
 PRODUCT OVERVIEW
 SafeSync AI is an intelligent emergency response platform designed to 
@@ -67,10 +62,10 @@ HOW TO RUN THE PROJECT LOCAL ENVIRONMENT
    automated safety tracking and analytics workflow.
 5. To test Offline Resilience: Open Browser DevTools (F12) -> Network Tab 
    -> Toggle to "Offline" mode -> Trigger an action.
-
-========================================================================
+   
+------------------------------------------------------------------------
 FUTURE ENHANCEMENTS
-========================================================================
+------------------------------------------------------------------------
 * Native Android App Deployment & Background OS Triggers
 * Hardware IoT Sensor Connectivity for Automatic Impact Detection
 * Real-Time Ambulance Fleet Tracking & Route Optimization
