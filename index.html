@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    SafeSync AI - Emergency Response System
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <div class="dashboard-header">
+
+      <div>
+
+        <h1>
+          SafeSync AI
+        </h1>
+
+        <p class="subtitle">
+          AI-Assisted Emergency Response System
+        </p>
+
+      </div>
+
+      <div class="live-status">
+        LIVE MONITORING
+      </div>
+
+    </div>
+
+    <!-- =========================
+         LOCATION BOX
+    ========================== -->
+
+    <div id="locationBox">
+
+      <div class="loader"></div>
+
+      <p>
+        Detecting live GPS location...
+      </p>
+
+    </div>
+
+    <!-- =========================
+         GOOGLE MAP BUTTON
+    ========================== -->
+
+    <div id="mapButtonContainer"></div>
+
+    <!-- =========================
+         INTERNET STATUS
+    ========================== -->
+
+    <div
+      id="offlineStatus"
+      class="online-mode"
+    >
+
+      🟢 Online Mode Active
+
+    </div>
+
+    <!-- =========================
+         BUTTONS
+    ========================== -->
+
+    <div class="button-group">
+
+      <button id="accidentBtn">
+        🚨 Simulate Accident
+      </button>
+
+      <button id="manualBtn">
+        🚑 Manual Emergency SOS
+      </button>
+
+      <button id="voiceBtn">
+        🎤 Voice Assistant
+      </button>
+
+      <button id="driveBtn">
+        🚗 Start Driving Mode
+      </button>
+
+    </div>
+
+    <!-- =========================
+         RESULT AREA
+    ========================== -->
+
+    <div id="result"></div>
+
+    <!-- =========================
+         DASHBOARD GRID
+    ========================== -->
+
+    <div class="dashboard-grid">
+
+      <!-- =========================
+           CONTACT SECTION
+      ========================== -->
+
+      <div class="contact-section">
+
+        <h2 class="section-title">
+          👥 Emergency Contacts
+        </h2>
+
+        <input
+          type="text"
+          id="contactName"
+          placeholder="Contact Name"
+        />
+
+        <input
+          type="text"
+          id="contactNumber"
+          placeholder="Phone Number"
+        />
+
+        <button id="saveContactBtn">
+          Save Contact
+        </button>
+
+        <!-- SAVED CONTACTS -->
+
+        <div id="savedContacts"></div>
+
+      </div>
+
+      <!-- =========================
+           ANALYTICS SECTION
+      ========================== -->
+
+      <div class="analytics-container">
+
+        <h2 class="section-title">
+          📊 AI Analytics Dashboard
+        </h2>
+
+        <div id="analyticsBox">
+
+          <p>
+            Total Accidents: 0
+          </p>
+
+          <p>
+            Critical Cases: 0
+          </p>
+
+          <p>
+            Medium Cases: 0
+          </p>
+
+          <p>
+            Low Cases: 0
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- =========================
+         SMS PREVIEW
+    ========================== -->
+
+    <div id="smsPreview"></div>
+
+    <!-- =========================
+         AI CHATBOT
+    ========================== -->
+
+    <div class="chat-container">
+
+      <h2 class="section-title">
+        🤖 SafeSync AI Assistant
+      </h2>
+
+      <div id="chatBox"></div>
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask AI for help..."
+      />
+
+      <button id="chatSendBtn">
+        Send
+      </button>
+
+    </div>
+
+  </div>
+  
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
